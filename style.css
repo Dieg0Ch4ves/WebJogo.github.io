@@ -1,0 +1,138 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo {
+    font-size: 50px;
+    margin: 0px;
+    padding: 20px 40px;
+}
+
+.reiniciar {
+    font-size: 50px;
+    margin: 0px;
+    padding: 20px 40px;
+    text-decoration: none;
+    background: #303030;
+    color: white;
+    border-radius: 4px;
+}
+
+:hover.reiniciar {
+    background-color: #121212;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 200px 50px 200px;
+}
+
+.Gameboard {
+    width: 80%;
+    height: 500px;
+    border: 5px solid #121212;  
+    margin: 0 auto;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgb(78, 175, 255), rgb(78, 175, 255), #fff, #fff)
+}
+
+.Gameboard::before {
+    content: '';
+    position: absolute;
+    background: yellow;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    left: -150px;
+    top: -150px;
+}
+
+.cone {
+    position: absolute;
+    bottom: 0px;
+    width: 80px;
+    animation: cone-animation 2s infinite linear;
+}
+
+.cavaleiro {
+    width: 200px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.nuvens {
+    position: absolute;
+    width: 500px;
+    animation: nuvens 5s infinite linear;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.score {
+    font-size: 60px;
+    margin-left: 200px;
+}
+
+.count {
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.divisao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lore {
+    font-size: 40px;
+}
+
+@keyframes cone-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    
+    40% {
+        bottom: 200px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes nuvens {
+    from {
+        right: -500px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
